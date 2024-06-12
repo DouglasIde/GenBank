@@ -1,6 +1,8 @@
 package conta;
 
+import conta.util.Cores;
 import java.util.Scanner;
+
 
 public class Menu {
 
@@ -12,7 +14,8 @@ public class Menu {
 		int opcao;
 
 		while(true) {
-			System.out.println("""
+			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + """
+					
 					*****************************************************
 
 					GEN BANK BRAZIL                
