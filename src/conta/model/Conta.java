@@ -54,5 +54,26 @@ public class Conta {
 		this.saldo = saldo;
 	}
 	
+	// MÉTODOS SACAR / DEPOSITAR / VISUALIZAR
+	
+	public boolean sacar(float valor) {
+		if(this.getSaldo() < valor) {
+			System.out.println("Saldo Insuficiente!");
+			return false;
+		}
+		this.setSaldo(this.getSaldo() - valor);
+		System.out.println("Saque bem sucedido");
+		return true;
+	}
+	
+	public void depositar(float valor) {
+		this.setSaldo(this.getSaldo() + valor);
+		System.out.println("Depósito bem sucedido");
+	}
+	
+	public void visualizar() {
+		String tipo = "";
+	}
+	
 	
 }
