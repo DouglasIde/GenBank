@@ -35,11 +35,11 @@ public class Menu {
 					*****************************************************
 					Entre com a opção desejada:                          
 
-					""");
+					""" + Cores.TEXT_RESET);
 			opcao = leitura.nextInt();
 
 			if(opcao == 9) {
-				System.out.println("\nA Gen Bank Brazil - O seu Futuro começa aqui!");
+				System.out.println(Cores.TEXT_WHITE_BOLD +"\nA Gen Bank Brazil - O seu Futuro começa aqui!");
 				sobre();
 				leitura.close();
 				System.exit(0);
