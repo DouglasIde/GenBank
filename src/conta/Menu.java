@@ -1,6 +1,7 @@
 package conta;
 
 import conta.util.Cores;
+import conta.model.Conta;
 import java.util.Scanner;
 
 
@@ -9,6 +10,9 @@ public class Menu {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		Conta conta1 = new Conta(1, 123, 1, "Douglas", 1000.0f);
+		conta1.visualizar();
+		
 		Scanner leitura = new Scanner(System.in);
 
 		int opcao;
