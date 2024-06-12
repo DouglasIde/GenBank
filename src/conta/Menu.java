@@ -33,6 +33,15 @@ public class Menu {
 Entre com a opção desejada:                          
                                                     
 					""");
+			opcao = leitura.nextInt();
+			
+			if(opcao == 9) {
+				System.out.println("\nA Gen Brazil - O seu Futuro começa aqui!");
+				leitura.close();
+				System.exit(0);
+			}
+			
+			
 		}
 	}
 
