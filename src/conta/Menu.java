@@ -46,31 +46,31 @@ public class Menu {
 			}
 			switch(opcao) {
 			case 1:
-				System.out.println("Criar Conta\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n");
 				break;
 			case 2:
-				System.out.println("Listar todas as Contas\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as Contas\n");
 				break;
 			case 3:
-				System.out.println("Consultar dados na Conta - por número\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados na Conta - por número\n");
 				break;
 			case 4:
-				System.out.println("Atualizar dados da Conta\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar dados da Conta\n");
 				break;
 			case 5:
-				System.out.println("Apagar a Conta\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Apagar a Conta\n");
 				break;
 			case 6:
-				System.out.println("Saque\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n");
 				break;
 			case 7:
-				System.out.println("Depósito\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n");
 				break;
 			case 8:
-				System.out.println("Transferência entre Contas\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Transferência entre Contas\n");
 				break;
 			default:
-				System.out.println("Opção Inválida!!\n");
+				System.out.println(Cores.TEXT_RED_BOLD + "Opção Inválida!!\n");
 				break;
 			}
 		}
