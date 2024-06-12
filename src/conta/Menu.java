@@ -36,7 +36,7 @@ public class Menu {
 			opcao = leitura.nextInt();
 
 			if(opcao == 9) {
-				System.out.println("\nA Gen Brazil - O seu Futuro começa aqui!");
+				System.out.println("\nA Gen Bank Brazil - O seu Futuro começa aqui!");
 				sobre();
 				leitura.close();
 				System.exit(0);
