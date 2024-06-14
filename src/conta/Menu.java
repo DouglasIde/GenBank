@@ -11,12 +11,6 @@ public class Menu {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Conta conta1 = new Conta(1, 123, 1, "Douglas", 10000.0f);
-		conta1.visualizar();
-		conta1.sacar(12000.0f);
-		conta1.visualizar();
-		conta1.depositar(5000.0f);
-		conta1.visualizar();
 		
 		ContaCorrente contaCorrente1 = new ContaCorrente(2, 123, 1, "Mariana", 1500f, 1000f);
 		
