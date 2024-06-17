@@ -18,8 +18,9 @@ public class ContaController implements IContaRepository {
 
 	@Override
 	public void listarTodas() {
-		// TODO Auto-generated method stub
-		
+		for (var conta : listaContas) {
+			conta.visualizar();
+		}
 	}
 
 	@Override
