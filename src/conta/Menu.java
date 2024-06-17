@@ -13,28 +13,16 @@ public class Menu {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		ContaController contas = new ContaController();
-
-		ContaCorrente contaCorrente1 = new ContaCorrente(2, 123, 1, "Mariana", 1500f, 1000f);
-
-		// contaCorrente1.visualizar();
-		// contaCorrente1.sacar(12000f);
-		// contaCorrente1.visualizar();
-		// contaCorrente1.depositar(5000f);
-		// contaCorrente1.visualizar();
-
-		ContaPoupanca contaPoupanca1 = new ContaPoupanca(3,123,2,"Victor", 100000f, 15);
-
-		//contaPoupanca1.visualizar();
-		// contaPoupanca1.sacar(1000f);
-		// contaPoupanca1.visualizar();
-		// contaPoupanca1.depositar(5000f);
-		// contaPoupanca1.visualizar();
 
 		Scanner leitura = new Scanner(System.in);
 
-		int opcao;
+		// VARIÁVEIS
+		int opcao, numero, agencia, tipo, aniversario;
+		String titular;
+		float saldo, limite;
+
 
 		while(true) {
 			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + """
@@ -78,11 +66,38 @@ public class Menu {
 			switch(opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n");
-				contas.listarTodas();
+				System.out.println("Digite o Número da Agência: ");
+				agencia = leitura.nextInt();
+				System.out.println("Digite o Nome do Titular: ");
+				leitura.skip("\\R?");
+				titular = leitura.nextLine();
+
+				do {
+					System.out.println("Digite o Tipo da Conta (1 - CC ou 2 - CP");
+					tipo = leitura.nextInt();
+				} while(tipo < 1 && tipo > 2);
+
+				System.out.println("Digite o Saldo da Conta (R$): ");
+				saldo = leitura.nextFloat();
+
+				switch(tipo) {
+				case 1 -> {
+					System.out.println("Digite o limite de Crédito (R$): ");
+					limite = leitura.nextInt();
+					contas.cadastrar(new ContaCorrente(contas.gerarNumero(), agencia, tipo, titular, saldo, limite));
+				}
+				case 2 -> {
+					System.out.println("Digite o dia do Anviersário da Conta: ");
+					aniversario = leitura.nextInt();
+					contas.cadastrar(new ContaPoupanca(contas.gerarNumero(), agencia, tipo, titular, saldo, aniversario));
+				}
+				}
+
 				keyPress();
 				break;
 			case 2:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as Contas\n");
+				contas.listarTodas();
 				keyPress();
 				break;
 			case 3:
