@@ -102,6 +102,9 @@ public class Menu {
 				break;
 			case 3:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados na Conta - por número\n");
+				System.out.println("Digite o número da Conta: ");
+				numero = leitura.nextInt();
+				contas.procurarPorNumero(numero);
 				keyPress();
 				break;
 			case 4:
