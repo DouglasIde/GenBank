@@ -76,30 +76,39 @@ public class Menu {
 			switch(opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n");
+				keyPress();
 				break;
 			case 2:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as Contas\n");
+				keyPress();
 				break;
 			case 3:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados na Conta - por número\n");
+				keyPress();
 				break;
 			case 4:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar dados da Conta\n");
+				keyPress();
 				break;
 			case 5:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Apagar a Conta\n");
+				keyPress();
 				break;
 			case 6:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n");
+				keyPress();
 				break;
 			case 7:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n");
+				keyPress();
 				break;
 			case 8:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Transferência entre Contas\n");
+				keyPress();
 				break;
 			default:
 				System.out.println(Cores.TEXT_RED_BOLD + "Opção Inválida!!\n");
+				keyPress();
 				break;
 			}
 		}
