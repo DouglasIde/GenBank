@@ -109,6 +109,43 @@ public class Menu {
 				break;
 			case 4:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar dados da Conta\n");
+				System.out.println("Digite o número da Conta: ");
+				numero = leitura.nextInt();
+
+				var buscaConta = contas.buscarNaCollection(numero);
+
+				if(buscaConta != null) {
+					tipo = buscaConta.getTipo();
+
+					System.out.println("Digite o Número da Agência: ");
+					agencia = leitura.nextInt();
+					System.out.println("Digite o Nome do Titular: ");
+					leitura.skip("\\R?");
+					titular = leitura.nextLine();
+
+					System.out.println("Digite o Saldo da Conta (R$): ");
+					saldo = leitura.nextFloat();
+
+					switch(tipo) {
+					case 1 -> {
+						System.out.println("Digite o Limite de Crédito (R$): ");
+						limite = leitura.nextInt();
+
+						contas.atualizar(new ContaCorrente(numero, agencia, tipo, titular, saldo, limite));
+					}
+					case 2 -> {
+						System.out.println("Digite o dia do Aniversário da Conta: ");
+						aniversario = leitura.nextInt();
+
+						contas.atualizar(new ContaPoupanca(numero, agencia, tipo, titular, saldo, aniversario));
+					}
+					default -> {
+						System.out.println("Tipo de Conta Inválido!!");
+					}
+					}
+				} else {
+					System.out.println("A Conta não foi encontrada!");
+				}
 				keyPress();
 				break;
 			case 5:
