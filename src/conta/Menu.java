@@ -1,7 +1,7 @@
 package conta;
 
 import conta.util.Cores;
-
+import conta.controller.ContaController;
 import conta.model.*;
 
 import java.io.IOException;
@@ -13,22 +13,24 @@ public class Menu {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		ContaController contas = new ContaController();
 
 		ContaCorrente contaCorrente1 = new ContaCorrente(2, 123, 1, "Mariana", 1500f, 1000f);
 
-		contaCorrente1.visualizar();
-		contaCorrente1.sacar(12000f);
-		contaCorrente1.visualizar();
-		contaCorrente1.depositar(5000f);
-		contaCorrente1.visualizar();
+		// contaCorrente1.visualizar();
+		// contaCorrente1.sacar(12000f);
+		// contaCorrente1.visualizar();
+		// contaCorrente1.depositar(5000f);
+		// contaCorrente1.visualizar();
 
 		ContaPoupanca contaPoupanca1 = new ContaPoupanca(3,123,2,"Victor", 100000f, 15);
 
-		contaPoupanca1.visualizar();
-		contaPoupanca1.sacar(1000f);
-		contaPoupanca1.visualizar();
-		contaPoupanca1.depositar(5000f);
-		contaPoupanca1.visualizar();
+		//contaPoupanca1.visualizar();
+		// contaPoupanca1.sacar(1000f);
+		// contaPoupanca1.visualizar();
+		// contaPoupanca1.depositar(5000f);
+		// contaPoupanca1.visualizar();
 
 		Scanner leitura = new Scanner(System.in);
 
@@ -76,6 +78,7 @@ public class Menu {
 			switch(opcao) {
 			case 1:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n");
+				contas.listarTodas();
 				keyPress();
 				break;
 			case 2:
