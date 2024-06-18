@@ -48,8 +48,15 @@ public class ContaController implements IContaRepository {
 
 	@Override
 	public void deletar(int numero) {
-		// TODO Auto-generated method stub
-
+		var conta = buscarNaCollection(numero);
+		
+		if(conta != null) {
+			if(listaContas.remove(conta) == true) {
+				System.out.println("A Conta número: " + numero + " foi deletada com sucesso!");
+			} else { 
+				System.out.println("A conta número: " + numero + " não foi encontrado!");
+			}
+		}
 	}
 
 	@Override
