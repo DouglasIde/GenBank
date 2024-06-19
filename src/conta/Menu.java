@@ -150,6 +150,9 @@ public class Menu {
 				break;
 			case 5:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Apagar a Conta\n");
+				System.out.println("Digite o número da Conta: ");
+				numero = leitura.nextInt();
+				contas.deletar(numero);
 				keyPress();
 				break;
 			case 6:
