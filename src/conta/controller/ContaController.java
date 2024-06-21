@@ -62,19 +62,19 @@ public class ContaController implements IContaRepository {
 	@Override
 	public void sacar(int numero, float valor) {
 		var conta = buscarNaCollection(numero);
-		
+
 		if(conta != null) {
 			if(conta.sacar(valor) == true) 
 				System.out.println("O Saque na Conta numero: " + numero + " foi efetuado com sucesso!");
-			} else 
-				System.out.println("A Conta número: " + numero + " não foi encontrado!"); 
-		}
-	
+		} else 
+			System.out.println("A Conta número: " + numero + " não foi encontrado!"); 
+	}
+
 
 	@Override
 	public void depositar(int numero, float valor) {
 		var conta = buscarNaCollection(numero);
-		
+
 		if(conta != null) {
 			conta.depositar(valor);
 			System.out.println("O Depósito na Conta Número: " + numero + " foi efetuado com sucesso!");
@@ -85,7 +85,17 @@ public class ContaController implements IContaRepository {
 
 	@Override
 	public void transferir(int numeroOrigem, int numeroDestino, float valor) {
-		// TODO Auto-generated method stub
+		var contaOrigem = buscarNaCollection(numeroOrigem);
+		var contaDestino = buscarNaCollection(numeroDestino);
+
+		if(contaOrigem != null && contaDestino != null) {
+			if(contaOrigem.sacar(valor) == true) {
+				contaDestino.depositar(valor);
+				System.out.println("A Transferência foi efetuada com Sucesso!");
+			}
+		} else {
+			System.out.println("A conta de Origem e/ou Destino NÃO foram encontradas!");
+		}
 
 	}
 
