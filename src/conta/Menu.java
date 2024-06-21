@@ -157,20 +157,31 @@ public class Menu {
 				break;
 			case 6:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n");
-				
+
 				System.out.println("Digite o Número da Conta: ");
 				numero = leitura.nextInt();
-				
+
 				do {
 					System.out.println("Digite o Valor do Saque (R$): ");
 					valor = leitura.nextFloat();
 				} while(valor <= 0);
-				
+
 				contas.sacar(numero, valor);
 				keyPress();
 				break;
 			case 7:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n");
+
+				System.out.println("Digite o Número da Conta: ");
+				numero = leitura.nextInt();
+
+				do {
+					System.out.println("Digite o valor do Depósito (R$): ");
+					valor = leitura.nextFloat();
+				} while(valor <= 9);
+
+				contas.depositar(numero, valor);
+
 				keyPress();
 				break;
 			case 8:
@@ -193,7 +204,6 @@ public class Menu {
 		System.out.println("*********************************************************");
 	}
 
-	// MÉTODOS
 	public static void keyPress(){
 		try {
 			System.out.println(Cores.TEXT_RESET + "Pressione ENTER para continuar...");
