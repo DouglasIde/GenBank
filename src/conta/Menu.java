@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Menu {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		ContaController contas = new ContaController();
 
@@ -25,28 +24,41 @@ public class Menu {
 
 
 		while(true) {
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND + """
+			System.out.println(Cores.TEXT_YELLOW + """
 
-					*****************************************************
+*****************************************************
 
-					GEN BANK BRAZIL                
+					
+░██████╗░███████╗███╗░░██╗  ██████╗░░█████╗░███╗░░██╗██╗░░██╗
+██╔════╝░██╔════╝████╗░██║  ██╔══██╗██╔══██╗████╗░██║██║░██╔╝
+██║░░██╗░█████╗░░██╔██╗██║  ██████╦╝███████║██╔██╗██║█████═╝░
+██║░░╚██╗██╔══╝░░██║╚████║  ██╔══██╗██╔══██║██║╚████║██╔═██╗░
+╚██████╔╝███████╗██║░╚███║  ██████╦╝██║░░██║██║░╚███║██║░╚██╗
+░╚═════╝░╚══════╝╚═╝░░╚══╝  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝
 
-					*****************************************************
+██████╗░██████╗░░█████╗░███████╗██╗██╗░░░░░
+██╔══██╗██╔══██╗██╔══██╗╚════██║██║██║░░░░░
+██████╦╝██████╔╝███████║░░███╔═╝██║██║░░░░░
+██╔══██╗██╔══██╗██╔══██║██╔══╝░░██║██║░░░░░
+██████╦╝██║░░██║██║░░██║███████╗██║███████╗
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝╚══════╝            
 
-					1 - Criar Conta                          
-					2 - Listar todas as Contas               
-					3 - Buscar Conta por Numero              
-					4 - Atualizar Dados da Conta             
-					5 - Apagar Conta                         
-					6 - Sacar                                
-					7 - Depositar                            
-					8 - Transferir valores entre Contas      
-					9 - Sair                                 
+*****************************************************
 
-					*****************************************************
-					Entre com a opção desejada:                          
+1 - Criar Conta                          
+2 - Listar todas as Contas               
+3 - Buscar Conta por Numero              
+4 - Atualizar Dados da Conta             
+5 - Apagar Conta                         
+6 - Sacar                                
+7 - Depositar                            
+8 - Transferir valores entre Contas      
+9 - Sair                                 
 
-					""" + Cores.TEXT_RESET);
+*****************************************************
+Entre com a opção desejada:                          
+
+""" + Cores.TEXT_RESET);
 
 			try {
 				opcao = leitura.nextInt();
@@ -65,7 +77,7 @@ public class Menu {
 			}
 			switch(opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＣＲＩＡＲ ＣＯＮＴＡ\n");
 				System.out.println("Digite o Número da Agência: ");
 				agencia = leitura.nextInt();
 				System.out.println("Digite o Nome do Titular: ");
@@ -87,7 +99,7 @@ public class Menu {
 					contas.cadastrar(new ContaCorrente(contas.gerarNumero(), agencia, tipo, titular, saldo, limite));
 				}
 				case 2 -> {
-					System.out.println("Digite o dia do Anviersário da Conta: ");
+					System.out.println("Digite o dia do Aniversário da Conta: ");
 					aniversario = leitura.nextInt();
 					contas.cadastrar(new ContaPoupanca(contas.gerarNumero(), agencia, tipo, titular, saldo, aniversario));
 				}
@@ -96,19 +108,19 @@ public class Menu {
 				keyPress();
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as Contas\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＬＩＳＴＡＲ ＴＯＤＡＳ ＡＳ ＣＯＮＴＡＳ\n");
 				contas.listarTodas();
 				keyPress();
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados na Conta - por número\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＣＯＮＳＵＬＴＡＲ ＤＡＤＯＳ ＮＡ ＣＯＮＴＡ － ＰＯＲ ＮＵＭＥＲＯ\n");
 				System.out.println("Digite o número da Conta: ");
 				numero = leitura.nextInt();
 				contas.procurarPorNumero(numero);
 				keyPress();
 				break;
 			case 4:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar dados da Conta\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＡＴＵＡＬＩＺＡＲ ＤＡＤＯＳ ＤＡ ＣＯＮＴＡ\n");
 				System.out.println("Digite o número da Conta: ");
 				numero = leitura.nextInt();
 
@@ -149,14 +161,14 @@ public class Menu {
 				keyPress();
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Apagar a Conta\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＡＰＡＧＡＲ Ａ ＣＯＮＴＡ\n");
 				System.out.println("Digite o número da Conta: ");
 				numero = leitura.nextInt();
 				contas.deletar(numero);
 				keyPress();
 				break;
 			case 6:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＳＡＱＵＥ\n");
 
 				System.out.println("Digite o Número da Conta: ");
 				numero = leitura.nextInt();
@@ -170,7 +182,7 @@ public class Menu {
 				keyPress();
 				break;
 			case 7:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＤＥＰＯＳＩＴＡＲ\n");
 
 				System.out.println("Digite o Número da Conta: ");
 				numero = leitura.nextInt();
@@ -185,7 +197,7 @@ public class Menu {
 				keyPress();
 				break;
 			case 8:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Transferência entre Contas\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "ＴＲＡＮＳＦＥＲＩＲ ＶＡＬＯＲＥＳ ＥＮＴＲＥ ＣＯＮＴＡＳ\n");
 				
 				System.out.println("Digite o Número da Conta de Origem: ");
 				numero = leitura.nextInt();
