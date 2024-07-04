@@ -1,6 +1,6 @@
 <h1 align="center">Gen Bank Brasil</h1>
-<p>Este projeto, representa um sistema bancário completo, equipado com todas as funcionalidades
-de um caixa eletrônico tradicional. Simulando transações, criação de contas e etc...</p>
+<p>This project represents a complete banking system, equipped with all the functionalities of a traditional ATM.
+of a traditional ATM. Simulating transactions, creating accounts and so on...</p>
 
 ![Imagem Título](https://github.com/DouglasIde/GenBank/blob/main/img_README/GenBankBrazilDouglas_Titulo.jpg)
 
@@ -28,5 +28,28 @@ operações CRUD.</p><br>
 <em>The project was developed during the Generation Bootcamp, simulating a complete banking 
 system that incorporates essential functionalities used by financial institutions. It was designed 
 with the aim of consolidating the fundamentals of Programming Logic, Object-Oriented Programming (OOP), and
- CRUD operations.</em>
-_
+ CRUD operations.</em><br><br>
+
+ <h1>📕Installation</h1>
+ <p>You should already have one of these Java IDEs installed</p>
+<li><a href="https://eclipseide.org/">Eclipse</li>
+<li><a href="https://www.jetbrains.com/pt-br/idea/">IntelliJ</li>
+<li><a href="https://code.visualstudio.com/download">Visual Studio Code</li><br><br>
+
+ <h1>📝How to use</h1>
+<p>The system operates via a menu that contains all the functions of a banking system. The user must enter a number to select one of the options available in the menu. 
+	All data is stored locally in memory.</p><br>
+ 
+<h1>🚀Features</h1>
+<li>Creating, Updating and Deleting Accounts;</li>
+<li>There are two types of accounts: Current Account and Savings Account;</li>
+<li>List all Accounts and Search for Accounts by Number;</li>
+<li>Bank account functions: Withdrawals, transfers and deposits;</li>
+<li>Class with the colors used in the system</li><br>
+
+<h1>🌐Technologies</h1>
+<ul>
+  <li><a href="https://www.java.com/pt-BR/">Java</a></li>
+  <li><a href="https://spring.io/tools">Spring Tools Suite</a></li>
+</ul>
+
